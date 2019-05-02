@@ -6,7 +6,8 @@ const chalk = require('chalk');
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
-      useNewUrlParser: true
+      useNewUrlParser: true,
+      useCreateIndex: true
     });
     console.log(chalk.green('MongoDB Connected...'));
   } catch (err) {
